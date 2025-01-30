@@ -1,0 +1,77 @@
+services:
+  scrapy_top10:
+    build: .
+    container_name: scrapy_spider_top10
+    working_dir: /app/netflix_scraper
+    volumes:
+      - .:/app
+    command: ["sh", "-c", "./wait-for-it.sh mongodb:27017 -- scrapy crawl netflix_top10"]
+    depends_on:
+      - splash
+      - elastic
+    networks:
+      - my_network
+
+  scrapy_top10_country:
+    build: .
+    container_name: scrapy_spider_top10_country
+    working_dir: /app/netflix_scraper
+    volumes:
+      - .:/app
+    command: ["sh", "-c", "./wait-for-it.sh elasticsearch:9200 -- scrapy crawl netflix_top10_country"]
+    depends_on:
+      - splash
+      - elastic
+    networks:
+      - my_network
+
+  dashapp:
+    build: .
+    container_name: dash_app_container
+    working_dir: /app/Dash_app
+    volumes:
+      - .:/app
+    command: ["sh", "-c", "./wait-for-it.sh elasticsearch:9200 -- python app.py"]
+    depends_on:
+      - splash
+      - elastic
+    networks:
+      - my_network
+    ports:
+      - "8051:8051"
+
+  elastic:
+    image: elasticsearch:8.15.2
+    container_name: elasticsearch
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ports:
+      - "9200:9200"
+    networks:
+      - my_network
+
+  splash:
+    image: scrapinghub/splash
+    container_name: splash
+    ports:
+      - "8050:8050"
+    networks:
+      - my_network
+
+  mongodb:
+    image: mongo:6.0
+    container_name: mongodb
+    restart: always
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+    networks:
+      - my_network
+
+networks:
+  my_network:
+    driver: bridge

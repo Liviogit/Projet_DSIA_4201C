@@ -1,0 +1,362 @@
+[
+    {
+        "title": "The Secret Life of Pets 2",
+        "rank": "01",
+        "week": "5",
+        "views": "15,000,000",
+        "runtime": "1:26",
+        "hours": "21,500,000",
+        "source": "tudum/top10"
+    },
+    {
+        "title": "Carry-On",
+        "rank": "02",
+        "week": "5",
+        "views": "7,200,000",
+        "runtime": "2:00",
+        "hours": "14,300,000",
+        "source": "tudum/top10"
+    },
+    {
+        "title": "Ma",
+        "rank": "03",
+        "week": "2",
+        "views": "7,000,000",
+        "runtime": "1:39",
+        "hours": "11,500,000",
+        "source": "tudum/top10"
+    },
+    {
+        "title": "The Secret Life of Pets",
+        "rank": "04",
+        "week": "6",
+        "views": "6,200,000",
+        "runtime": "1:27",
+        "hours": "9,000,000",
+        "source": "tudum/top10"
+    },
+    {
+        "title": "Despicable Me 2",
+        "rank": "05",
+        "week": "14",
+        "views": "4,900,000",
+        "runtime": "1:38",
+        "hours": "8,000,000",
+        "source": "tudum/top10"
+    },
+    {
+        "title": "Wallace & Gromit: Vengeance Most Fowl",
+        "rank": "06",
+        "week": "1",
+        "views": "4,600,000",
+        "runtime": "1:22",
+        "hours": "6,300,000",
+        "source": "tudum/top10"
+    },
+    {
+        "title": "Despicable Me",
+        "rank": "07",
+        "week": "7",
+        "views": "4,400,000",
+        "runtime": "1:35",
+        "hours": "6,900,000",
+        "source": "tudum/top10"
+    },
+    {
+        "title": "Eye for an Eye",
+        "rank": "08",
+        "week": "1",
+        "views": "4,400,000",
+        "runtime": "1:42",
+        "hours": "7,400,000",
+        "source": "tudum/top10"
+    },
+    {
+        "title": "The Six Triple Eight",
+        "rank": "09",
+        "week": "4",
+        "views": "4,000,000",
+        "runtime": "2:10",
+        "hours": "8,700,000",
+        "source": "tudum/top10"
+    },
+    {
+        "title": "Sonic the Hedgehog",
+        "rank": "10",
+        "week": "11",
+        "views": "3,600,000",
+        "runtime": "1:41",
+        "hours": "6,100,000",
+        "source": "tudum/top10"
+    },
+    {
+        "title": "Missing You: Limited Series",
+        "rank": "01",
+        "week": "2",
+        "views": "15,200,000",
+        "runtime": "3:46",
+        "hours": "57,200,000",
+        "source": "tv"
+    },
+    {
+        "title": "American Primeval: Limited Series",
+        "rank": "02",
+        "week": "1",
+        "views": "10,400,000",
+        "runtime": "5:02",
+        "hours": "52,400,000",
+        "source": "tv"
+    },
+    {
+        "title": "Jerry Springer: Fights, Camera, Action: Limited Series",
+        "rank": "03",
+        "week": "1",
+        "views": "7,700,000",
+        "runtime": "1:38",
+        "hours": "12,600,000",
+        "source": "tv"
+    },
+    {
+        "title": "Raw: 2025 January 6, 2025",
+        "rank": "04",
+        "week": "1",
+        "views": "5,900,000",
+        "runtime": "2:25",
+        "hours": "17,700,000",
+        "source": "tv"
+    },
+    {
+        "title": "Departure: Season 1",
+        "rank": "05",
+        "week": "2",
+        "views": "3,600,000",
+        "runtime": "4:16",
+        "hours": "15,500,000",
+        "source": "tv"
+    },
+    {
+        "title": "Virgin River: Season 6",
+        "rank": "06",
+        "week": "4",
+        "views": "3,100,000",
+        "runtime": "8:19",
+        "hours": "25,800,000",
+        "source": "tv"
+    },
+    {
+        "title": "Gabriel Iglesias: Legend of Fluffy",
+        "rank": "07",
+        "week": "1",
+        "views": "2,900,000",
+        "runtime": "1:42",
+        "hours": "4,900,000",
+        "source": "tv"
+    },
+    {
+        "title": "Black Doves: Season 1",
+        "rank": "08",
+        "week": "6",
+        "views": "2,800,000",
+        "runtime": "5:30",
+        "hours": "15,200,000",
+        "source": "tv"
+    },
+    {
+        "title": "Departure: Season 2",
+        "rank": "09",
+        "week": "2",
+        "views": "2,400,000",
+        "runtime": "4:16",
+        "hours": "10,200,000",
+        "source": "tv"
+    },
+    {
+        "title": "The Night Agent: Season 1",
+        "rank": "10",
+        "week": "12",
+        "views": "2,300,000",
+        "runtime": "8:11",
+        "hours": "18,700,000",
+        "source": "tv"
+    },
+    {
+        "title": "Ad Vitam",
+        "rank": "01",
+        "week": "1",
+        "views": "17,100,000",
+        "runtime": "1:38",
+        "hours": "28,000,000",
+        "source": "films-non-english"
+    },
+    {
+        "title": "The Love Scam",
+        "rank": "02",
+        "week": "2",
+        "views": "7,200,000",
+        "runtime": "1:41",
+        "hours": "12,200,000",
+        "source": "films-non-english"
+    },
+    {
+        "title": "Number 24",
+        "rank": "03",
+        "week": "2",
+        "views": "6,400,000",
+        "runtime": "1:52",
+        "hours": "12,000,000",
+        "source": "films-non-english"
+    },
+    {
+        "title": "Umjolo: My Beginning, My End!",
+        "rank": "04",
+        "week": "1",
+        "views": "1,500,000",
+        "runtime": "1:14",
+        "hours": "1,900,000",
+        "source": "films-non-english"
+    },
+    {
+        "title": "The Children's Train",
+        "rank": "05",
+        "week": "6",
+        "views": "1,400,000",
+        "runtime": "1:46",
+        "hours": "2,500,000",
+        "source": "films-non-english"
+    },
+    {
+        "title": "Bhool Bhulaiyaa 3",
+        "rank": "06",
+        "week": "3",
+        "views": "1,400,000",
+        "runtime": "2:38",
+        "hours": "3,600,000",
+        "source": "films-non-english"
+    },
+    {
+        "title": "Family Pack",
+        "rank": "07",
+        "week": "7",
+        "views": "900,000",
+        "runtime": "1:35",
+        "hours": "1,400,000",
+        "source": "films-non-english"
+    },
+    {
+        "title": "Hopeless",
+        "rank": "08",
+        "week": "1",
+        "views": "900,000",
+        "runtime": "1:59",
+        "hours": "1,700,000",
+        "source": "films-non-english"
+    },
+    {
+        "title": "Under Paris",
+        "rank": "09",
+        "week": "17",
+        "views": "800,000",
+        "runtime": "1:44",
+        "hours": "1,400,000",
+        "source": "films-non-english"
+    },
+    {
+        "title": "The Paradise of Thorns",
+        "rank": "10",
+        "week": "1",
+        "views": "800,000",
+        "runtime": "2:11",
+        "hours": "1,700,000",
+        "source": "films-non-english"
+    },
+    {
+        "title": "Squid Game: Season 2",
+        "rank": "01",
+        "week": "3",
+        "views": "26,300,000",
+        "runtime": "7:10",
+        "hours": "188,300,000",
+        "source": "tv-non-english"
+    },
+    {
+        "title": "The Breakthrough: Limited Series",
+        "rank": "02",
+        "week": "1",
+        "views": "10,600,000",
+        "runtime": "2:39",
+        "hours": "28,000,000",
+        "source": "tv-non-english"
+    },
+    {
+        "title": "Squid Game: Season 1",
+        "rank": "03",
+        "week": "26",
+        "views": "8,700,000",
+        "runtime": "8:19",
+        "hours": "72,600,000",
+        "source": "tv-non-english"
+    },
+    {
+        "title": "Fake Profile: Killer Match",
+        "rank": "04",
+        "week": "1",
+        "views": "4,600,000",
+        "runtime": "7:08",
+        "hours": "33,000,000",
+        "source": "tv-non-english"
+    },
+    {
+        "title": "Subteran: Season 1",
+        "rank": "05",
+        "week": "1",
+        "views": "3,700,000",
+        "runtime": "4:29",
+        "hours": "16,500,000",
+        "source": "tv-non-english"
+    },
+    {
+        "title": "La Palma: Limited Series",
+        "rank": "06",
+        "week": "5",
+        "views": "3,600,000",
+        "runtime": "3:04",
+        "hours": "11,000,000",
+        "source": "tv-non-english"
+    },
+    {
+        "title": "When the Phone Rings: Limited Series",
+        "rank": "07",
+        "week": "8",
+        "views": "2,900,000",
+        "runtime": "13:33",
+        "hours": "39,900,000",
+        "source": "tv-non-english"
+    },
+    {
+        "title": "When the Stars Gossip: Limited Series",
+        "rank": "08",
+        "week": "1",
+        "views": "2,400,000",
+        "runtime": "4:25",
+        "hours": "10,800,000",
+        "source": "tv-non-english"
+    },
+    {
+        "title": "Hound's Hill: Limited Series",
+        "rank": "09",
+        "week": "1",
+        "views": "2,400,000",
+        "runtime": "5:17",
+        "hours": "12,900,000",
+        "source": "tv-non-english"
+    },
+    {
+        "title": "Dubai Bling: Season 3",
+        "rank": "10",
+        "week": "1",
+        "views": "2,400,000",
+        "runtime": "7:46",
+        "hours": "18,600,000",
+        "source": "tv-non-english"
+    }
+]

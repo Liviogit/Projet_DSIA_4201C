@@ -1,0 +1,5 @@
+scrapy
+ipykernel
+selenium
+webdriver_manager
+urlib

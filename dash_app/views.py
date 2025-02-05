@@ -5,7 +5,7 @@ import pandas as pd
 def create_views():
     """Crée la mise en page initiale du tableau de bord sans figure."""
     return html.Div([
-        html.H2("Vues"),
+        html.H2("Vues",style={'textAlign': 'center', 'color': '#FF0000', 'fontWeight': 'bold','font-family': 'Arial, sans-serif'}),
         dcc.Dropdown(
             id='url-path',
             options=[

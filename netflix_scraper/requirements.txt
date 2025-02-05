@@ -1,0 +1,7 @@
+scrapy==2.12.0
+scrapy-splash
+pymongo==4.6.1
+elasticsearch
+plotly
+pandas
+dash

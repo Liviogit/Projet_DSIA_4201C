@@ -22,12 +22,12 @@ def fetch_data_from_elasticsearch():
 def create_country():
     """Crée la mise en page initiale du tableau de bord avec filtre par catégorie."""
     return html.Div([
-        html.H2("Titres avec le plus grand nombre de pays par catégorie"),
+        html.H2("Titres avec le plus grand nombre de présence dans les top 10 nationaux",style={'textAlign': 'center', 'color': '#FF0000', 'fontWeight': 'bold','font-family': 'Arial, sans-serif'}),
         dcc.Dropdown(
             id='category-filter',
             options=[
                 {'label': 'Films', 'value': 'movie'},
-                {'label': 'TV', 'value': 'tv'}
+                {'label': 'Série', 'value': 'tv'}
             ],
             value='movie',  # Valeur par défaut
             clearable=False
@@ -46,7 +46,6 @@ def create_country():
      Input('category-filter', 'value')]
 )
 def update_graph(n_intervals, selected_category):
-    """Met à jour le graphique avec les données filtrées par catégorie."""
     data = fetch_data_from_elasticsearch()
     df = pd.DataFrame(data)
 
@@ -65,7 +64,7 @@ def update_graph(n_intervals, selected_category):
         df_sorted,
         x='title',
         y='num_countries',
-        title=f"Nombre de pays par titre - {selected_category.capitalize()}",
+        title=f"Nombre de pays où les titres sont disponibles en tendance",
         labels={'title': 'Titre', 'num_countries': 'Nombre de pays'},
         text_auto=True
     )

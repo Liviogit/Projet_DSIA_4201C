@@ -24,34 +24,62 @@ app = dash.Dash(__name__, suppress_callback_exceptions=True)
 
 app.layout = html.Div(children=[
     dcc.Location(id='url', refresh=False),
-    html.H1("Dashboard Netflix",style={'textAlign': 'center', 'color': '#FF0000', 'fontWeight': 'bold','font-family': 'Arial, sans-serif'}),
+    html.Div(children=[
+        dcc.Link(
+            html.H1("Dashboard Netflix", style={
+                'textAlign': 'center',
+                'color': '#FF0000',
+                'fontWeight': 'bold',
+                'font-family': 'Arial, sans-serif',
+                'cursor': 'pointer',
+                'textDecoration': 'none'  # Supprime le soulignement du lien
+            }),
+            href='/'
+        )
+    ], style={
+        'display': 'flex',
+        'justifyContent': 'space-around',
+        'padding': '10px',
+        'backgroundColor': '#000000'
+    }),
     
     html.Nav([
-        dcc.Link('Durée dans le top', href='/fame',style={'color': '#ff0000', 'textDecoration': 'none','font-family': 'Arial, sans-serif'}),
-        dcc.Link('Vues', href='/views',style={'color': '#ff0000', 'textDecoration': 'none','font-family': 'Arial, sans-serif'}),
-        dcc.Link('Durée', href='/runtime',style={'color': '#ff0000', 'textDecoration': 'none','font-family': 'Arial, sans-serif'}),
-        dcc.Link("Nombre d'heures visionnées", href='/hours',style={'color': '#ff0000', 'textDecoration': 'none','font-family': 'Arial, sans-serif'}),
-        dcc.Link('Dans le monde', href='/country',style={'color': '#ff0000', 'textDecoration': 'none','font-family': 'Arial, sans-serif'}),
-        dcc.Link('Recherche un titre', href='/title',style={'color': '#ff0000', 'textDecoration': 'none','font-family': 'Arial, sans-serif'})
+        dcc.Link('Durée dans le top 10', href='/fame',style={'color': '#fff', 'textDecoration': 'none','font-family': 'Arial, sans-serif'}),
+        dcc.Link('Nombre de vues', href='/views',style={'color': '#fff', 'textDecoration': 'none','font-family': 'Arial, sans-serif'}),
+        dcc.Link('Durée du contenu', href='/runtime',style={'color': '#fff', 'textDecoration': 'none','font-family': 'Arial, sans-serif'}),
+        dcc.Link("Nombre d'heures visionnées", href='/hours',style={'color': '#fff', 'textDecoration': 'none','font-family': 'Arial, sans-serif'}),
+        dcc.Link('Contenu international', href='/country',style={'color': '#fff', 'textDecoration': 'none','font-family': 'Arial, sans-serif'}),
+        dcc.Link("Recherche d'un titre", href='/title',style={'color': '#fff', 'textDecoration': 'none','font-family': 'Arial, sans-serif'})
     ],style={
                 'display': 'flex',
                 'justifyContent': 'space-around',
                 'padding': '10px',
-                'backgroundColor': '#000000',  # Noir profond
-                'boxShadow': '0px 4px 6px rgba(0, 0, 0, 0.1)'}
+                'backgroundColor': '#000000'}
     ),
     html.Div(id='page-content',style={
-                'backgroundColor': '#121212',  # Noir clair
-                'color': '#FF0000',  # Texte rouge
+                'backgroundColor': '#303030',
                 'padding': '20px',
                 'minHeight': '100vh'})
-])
+],style={
+                'padding': '10px',
+                'backgroundColor': '#303030'})
 
 # Callback to update the page content based on the URL
 @callback(Output('page-content', 'children'), Input('url', 'pathname'))
 def display_page(pathname):
     if pathname == '/':
-        return None
+        return html.Div([html.H3(
+    "Ce projet étudiant, réalisé dans le cadre de la matière DSIA-4201C, vise à faciliter la recherche de films tendances dans le monde sur la plateforme Netflix. "
+    "Pour cela, deux spiders Scrapy collectent des données depuis Netflix Tudum. "
+    "Ces informations sont ensuite stockées dans Elasticsearch ou MongoDB, "
+    "avant d’être affichées dynamiquement sur cette page grâce à Dash.",style={
+                'textAlign': 'center',
+                'color': '#fff',
+                'font-family': 'Arial, sans-serif',
+                'maxWidth': '60%',
+                'margin': 'auto'
+            }
+)])
     elif pathname == '/views':
         return create_views()   # Display the vma histogram page
     elif pathname == '/fame':
@@ -67,7 +95,7 @@ def display_page(pathname):
     elif pathname == '/title':          
         return create_title()  # Display the grav histogram page
     else:
-        return html.Div("Nothing here...", style={'padding': '20px'})  # Home page
+        return html.Div("Nothing here...", style={'padding': '20px','color':'#fff'})  # Home page
 
 
 if __name__ == '__main__':

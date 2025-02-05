@@ -1,39 +1,33 @@
 services:
   scrapy_top10:
-    build: .
+    build:
+      context: ./netflix_scraper
+      dockerfile: Dockerfile.scrapy_top10
     container_name: scrapy_spider_top10
-    working_dir: /app/netflix_scraper
-    volumes:
-      - .:/app
-    command: ["sh", "-c", "./wait-for-it.sh mongodb:27017 -- scrapy crawl netflix_top10"]
+    working_dir: /netflix_scraper
     depends_on:
-      - splash
       - elastic
     networks:
       - my_network
 
   scrapy_top10_country:
-    build: .
+    build:
+      context: ./netflix_scraper
+      dockerfile: Dockerfile.scrapy_top10_country
     container_name: scrapy_spider_top10_country
-    working_dir: /app/netflix_scraper
-    volumes:
-      - .:/app
-    command: ["sh", "-c", "./wait-for-it.sh elasticsearch:9200 -- scrapy crawl netflix_top10_country"]
     depends_on:
-      - splash
       - elastic
     networks:
       - my_network
 
   dashapp:
-    build: .
+    build:
+      context: ./dash_app
+      dockerfile: Dockerfile
     container_name: dash_app_container
-    working_dir: /app/Dash_app
-    volumes:
-      - .:/app
-    command: ["sh", "-c", "./wait-for-it.sh elasticsearch:9200 -- python app.py"]
+    
     depends_on:
-      - splash
+      - mongodb
       - elastic
     networks:
       - my_network
@@ -49,14 +43,6 @@ services:
       - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
     ports:
       - "9200:9200"
-    networks:
-      - my_network
-
-  splash:
-    image: scrapinghub/splash
-    container_name: splash
-    ports:
-      - "8050:8050"
     networks:
       - my_network
 
